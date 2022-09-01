@@ -1,0 +1,17 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        if x < 0 : return False
+        x=str(x)
+        n=len(x)
+        m=n//2
+
+        if n%2 == 0:
+            if x[m:][::-1] == x[:m]:
+                return True
+            else:
+                return False
+        else:
+            if x[m+1:][::-1] == x[:m]:
+                return True
+            else:
+                return False
